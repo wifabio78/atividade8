@@ -33,7 +33,7 @@ async function callFetchWithPost(craque){
     await fetch(url, options);
 }
 
-async function callFetchWithPut(id, novoPokemon){
+async function callFetchWithPut(id, novoCraque){
     const options = {
         method : 'PUT',
         mode: 'cors',
