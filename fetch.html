@@ -2,10 +2,10 @@
 <html>
     <head>
         <title>
-            Aula 11
+            Dream Team
         </title>
         <meta charset="UTF-8"/>
-        <script src='functions.js'></script>
+        <script src='fetch.js'></script>
     </head>
     <body>
        <!-- <h2>Padrão Rest</h2>-->
@@ -17,14 +17,12 @@
 
         <h2>Formulario Basico (Post)</h2>
         <form id="postForm">
-             <label for="entrarpokemon">Pokemon:</label>
-             <input type="text" name="pokemon" id="entrarpokemon"/>
+             <label for="entrarcraque">craque:</label>
+             <input type="text" name="craque" id="entrarcraque"/>
 
              <label for="entrartype">Type:</label>
              <input type="text" name="type" id="entrartype"/>
 
-             <label for="entrarabout">About:</label>
-             <input type="text" name="about" id="entrarabout"/>
 
              <button type="submit" onclick="return submitPost()">Submit</button>
         </form>
@@ -38,17 +36,14 @@
             </label>
 
 
-            <label>Pokemon:
-            <input type="text" name="pokemon"/>
+            <label>craque:
+            <input type="text" name="craque"/>
             </label>
 
             <label>Type:
             <input type="text" name="type"/>
             </label>
 
-            <label >About:</label>
-            <input type="text" name="about" />
-            </label>
 
             <button type="submit" onclick="return submitPut()">Submit</button>
        </form>
