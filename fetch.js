@@ -92,7 +92,9 @@ function submitPut(){
 
 function submitDelete(){
     const form = document.forms['deleteForm'];  
-    const id = form["time"].value;  
+    const id = form["id"].value; 
+    const novocra = form["time"].value;
+    const novotype = form["type"].value;
     callFetchWithDelete(id);
     return false; // Evitar o reload da tela.
 }
