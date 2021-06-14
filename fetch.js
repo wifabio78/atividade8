@@ -1,4 +1,4 @@
-let url = 'https://blabla3.herokuapp.com/database'
+let url = 'https://blabla3.herokuapp.com/time'
 
 async function callFetchWithGet(){
     let headers = new Headers();
