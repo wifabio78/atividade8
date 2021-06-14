@@ -1,4 +1,4 @@
-let url = 'https://tt905-2021-mensagens-bruno.herokuapp.com/database'
+let url = 'https://blabla3.herokuapp.com/time'
 
 async function callFetchWithGet(){
     let headers = new Headers();
@@ -18,7 +18,7 @@ async function callFetchWithGet(){
     }
 }
 
-async function callFetchWithPost(pokemon){
+async function callFetchWithPost(craque){
     const options = {
         method : 'POST',
         mode: 'cors',
@@ -27,7 +27,7 @@ async function callFetchWithPost(pokemon){
             'content-type' : 'application/json'
         },
         body : JSON.stringify({
-            'pokedexs' : pokemon
+            'times' : craque
         })
     }
     await fetch(url, options);
@@ -42,7 +42,7 @@ async function callFetchWithPut(id, novoPokemon){
             'content-type' : 'application/json'
         },
         body : JSON.stringify({
-            'pokedexs' : novoPokemon
+            'times' : novoCraque
         })
     }
     await fetch(`${url}/${id}`, options);
@@ -67,11 +67,11 @@ async function callFetchWithDelete(id){
 function submitPost(){
     console.log("entrei na função");
     const form = document.forms['postForm'];    
-    const novopoke = form["pokemon"].value;
+    const novocra = form["craque"].value;
     const novotype = form["type"].value;
-    const novoabout = form["about"].value;
+    
 
-    const novo = {"name": novopoke , "type" : novotype, "about" : novoabout};
+    const novo = {"name": novocra , "type" : novotype};
     
     callFetchWithPost(novo);
     return false; // Evitar o reload da tela.
@@ -80,11 +80,11 @@ function submitPost(){
 function submitPut(){
     const form = document.forms['putForm'];  
     const id = form["id"].value;  
-    const novopoke = form["pokemon"].value;
+    const novocra = form["craque"].value;
     const novotype = form["type"].value;
-    const novoabout = form["about"].value;
+    
 
-    const novo = {"name": novopoke , "type" : novotype, "about" : novoabout};
+    const novo = {"name": novocra , "type" : novotype};
     
     callFetchWithPut(id, novo);
     return false; // Evitar o reload da tela.
