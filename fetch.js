@@ -67,7 +67,7 @@ async function callFetchWithDelete(id){
 function submitPost(){
     console.log("entrei na função");
     const form = document.forms['postForm'];    
-    const novocra = form["craque"].value;
+    const novocra = form["time"].value;
     const novotype = form["type"].value;
     
 
@@ -80,7 +80,7 @@ function submitPost(){
 function submitPut(){
     const form = document.forms['putForm'];  
     const id = form["id"].value;  
-    const novocra = form["craque"].value;
+    const novocra = form["time"].value;
     const novotype = form["type"].value;
     
 
